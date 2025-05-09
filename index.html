@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JB PROPERTIES LIMITED</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #d40000, #002f6c);
+      color: #333;
+    }
+    header {
+      background-color: #002f6c;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .logo-container img {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #d40000;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main > section {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      color: #000;
+    }
+    main > section.active {
+      display: block;
+    }
+    .listing {
+      background: #f5f5f5;
+      padding: 15px;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid #d40000;
+    }
+    form {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 20px auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background: #002f6c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      display: inline-block;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+    footer {
+      background: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .testimonials, .partner {
+      background: #f5f5f5;
+      padding: 15px;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .testimonials blockquote {
+      font-style: italic;
+      margin: 10px 0;
+    }
+    .faq {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .faq h3 {
+      margin-bottom: 10px;
+    }
+    .map {
+      height: 300px;
+      width: 100%;
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('main > section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = () => showSection('home');
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+     <img src="logo.png" alt="JB Properties Logo">
+      <h1>JB Properties Limited</h1>
+      <p>Your reliable, affordable, comfortable home solutions.</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('listings')">Listings</a>
+    <a href="#" onclick="showSection('gallery')">Gallery</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+    <a href="#" onclick="showSection('testimonials')">Testimonials</a>
+    <a href="#" onclick="showSection('partner')">Partner with Us</a>
+    <a href="#" onclick="showSection('map')">Map of Properties</a>
+    <a href="#" onclick="showSection('faq')">FAQs</a>
+  </nav>
+
+  <main>
+    <section id="home" class="active">
+  <h2>Welcome to JB Properties Limited</h2>
+  <p>Looking for a reliable place to stay in Nyeri?
+   JB Properties Limited is your trusted real estate partner for all housing needs—from budget bedsitters to luxurious Airbnbs and hotel options.</p>
+
+  <h3>What We Offer</h3>
+  <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+    <li>🏠 Bedsitters, 1, 2, and 3-bedroom houses</li>
+    <li>🛌 Short-term Airbnb stays with modern amenities</li>
+    <li>🏨 Hotel options for visitors and travelers</li>
+    <li>✅ Verified properties with clean water, electricity, WiFi, and security</li>
+    <li>📍 Properties in all Nyeri areas: Skuta, King'ong'o, Kamakwa,Kamuyu, Ruring'u,kangemi and more</li>
+  </ul>
+
+  <h3>Why Choose Us?</h3>
+  <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+    <li>✅ Affordable and transparent pricing</li>
+    <li>📞 Friendly support via phone and WhatsApp</li>
+    <li>🔍 Honest listings — what you see is what you get</li>
+    <li>🏆 Excellent reputation and satisfied clients</li>
+  </ul>
+
+  <div style="margin-top: 20px;">
+    <a href="https://wa.me/254742447454" class="whatsapp-btn">Chat With an Agent</a>
+    <a href="#" onclick="showSection('listings')" class="whatsapp-btn" style="background: #d40000;">View Listings</a>
+  </div>
+</section>
+
+    <section id="listings">
+      <h2>Our Listings</h2>
+      <div class="listing">
+        <h3>1 Bedroom Apartment - Nyeri Town</h3>
+        <p>Spacious and secure apartment with WiFi, parking, and water included. Ksh 12,000/month.</p>
+      </div>
+      <div class="listing">
+        <h3>2 Bedroom House - Skuta</h3>
+        <p>Modern house in a quiet neighborhood. Ksh 18,000/month.</p>
+      </div>
+      <div class="listing">
+        <h3>Airbnb - King'ong'o</h3>
+        <p>Fully furnished with hot shower, Netflix, and kitchen. Ksh 2,500/night.</p>
+      </div>
+      <div class="listing">
+        <h3>2 Bedroom House - Kangemi</h3>
+        <p>Modern house in a quiet neighborhood. Ksh 18,000/month.</p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/300x200?text=1+Bedroom+Nyeri" alt="1 Bedroom Nyeri">
+        <img src="https://via.placeholder.com/300x200?text=2+Bedroom+Skuta" alt="2 Bedroom Skuta">
+        <img src="https://via.placeholder.com/300x200?text=Airbnb+King'ong'o" alt="Airbnb Kingong'o">
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>What Our Clients Say</h2>
+     <section id="testimonials">
+
+  <div class="testimonials">
+    <blockquote>
+      "JB Properties helped me find my dream home in Nyeri! Their service was fast, reliable, and so professional!"
+      <footer>— Josephine Wambui</footer>
+    </blockquote>
+    <blockquote>
+      "I had an amazing experience with JB Properties. They truly care about matching you with the right property!"
+      <footer>— Cecily Wambui</footer>
+    </blockquote>
+    <blockquote>
+      "As a first-time homebuyer, I was nervous about the process. JB Properties made everything so easy and guided me every step of the way."
+      <footer>— Samuel Mwangi</footer>
+    </blockquote>
+    <blockquote>
+      "Their team is incredibly professional and responsive. I found the perfect apartment within days!"
+      <footer>— Grace Njeri</footer>
+    </blockquote>
+    <blockquote>
+      "I was relocating to Nyeri and needed a place quickly. JB Properties came through with multiple options that fit my budget."
+      <footer>— Peter Otieno</footer>
+    </blockquote>
+    <blockquote>
+      "Excellent customer service and a wide range of listings. I highly recommend JB Properties to anyone looking for a home."
+      <footer>— Linda Achieng</footer>
+    </blockquote>
+    <blockquote>
+      "They understood exactly what I was looking for and didn't waste my time with unsuitable properties."
+      <footer>— Michael Kariuki</footer>
+    </blockquote>
+    <blockquote>
+      "The process was seamless, and they handled all the paperwork efficiently. Truly a stress-free experience."
+      <footer>— Beatrice Wanjiku</footer>
+    </blockquote>
+  </div>
+</section>
+
+    </section>
+
+    <section id="partner">
+  <h2>Partner with Us</h2>
+  <p>
+    Are you a property owner, real estate investor, or developer looking to maximize your property's potential in Nyeri and its environs? JB Properties Limited offers strategic partnerships that ensure your properties are occupied by reliable tenants and managed professionally.
+  </p>
+  <h3>Why Partner with JB Properties?</h3>
+  <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+    <li>🔍 Extensive local market knowledge and reach</li>
+    <li>📈 Tailored marketing strategies to attract quality tenants</li>
+    <li>🛠️ Comprehensive property management services</li>
+    <li>🤝 Transparent and trustworthy collaboration</li>
+    <li>💼 Dedicated team focused on maximizing your returns</li>
+  </ul>
+  <p>
+    Join our network of satisfied partners and experience seamless property management and increased profitability. Let's work together to provide quality housing solutions in Nyeri.
+  </p>
+  <div style="margin-top: 20px;">
+    <a href="https://wa.me/254742447454" class="whatsapp-btn">Start a Partnership</a>
+  </div>
+</section>
+
+
+    <section id="map">
+      <h2>Map of Available Properties</h2>
+      <div class="map">
+        <!-- Embed a Google Map here for properties -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28316.65861704649!2d36.95108331928769!3d-0.42740528786525207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184d29be699d9c79%3A0x244a5ad5b0137203!2sNyeri%2C%20Kenya!5e0!3m2!1sen!2sus!4v1673462789049!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+   <section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <h3>What types of properties do you offer?</h3>
+    <p>We offer bedsitters, one-bedroom, two-bedroom, three-bedroom houses, as well as Airbnbs and hotel listings.</p>
+
+    <h3>How can I contact JB Properties?</h3>
+    <p>You can call us at 0742447454 or email jbpropertieslimited@gmail.com. You can also contact us via WhatsApp.</p>
+
+    <h3>Do you charge any fees for your services?</h3>
+    <p>Our service is free for renters. There may be a commission for property owners for successful deals.</p>
+
+    <h3>What areas do you serve?</h3>
+    <p>We primarily operate in Nyeri County and its surrounding regions.</p>
+
+    <h3>Do you assist with property management?</h3>
+    <p>Yes, we offer property management services, including tenant sourcing, rent collection, and maintenance coordination.</p>
+
+    <h3>Can I schedule a property viewing?</h3>
+    <p>Absolutely! Contact us to arrange a convenient time for property viewings.</p>
+
+    <h3>Do you offer furnished properties?</h3>
+    <p>Yes, we have a selection of furnished properties, including Airbnbs and serviced apartments.</p>
+
+    <h3>How do I list my property with JB Properties?</h3>
+    <p>Reach out to us via phone or email with your property details, and our team will guide you through the listing process.</p>
+
+    <h3>Are your listings updated regularly?</h3>
+    <p>Yes, we update our property listings frequently to reflect current availability.</p>
+
+    <h3>Do you provide assistance with legal documentation?</h3>
+    <p>We can connect you with reputable legal professionals to assist with property transactions and documentation.</p>
+  </div>
+</section>
+
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>JB Properties Limited is a real estate agency dedicated to helping clients find suitable and affordable housing solutions in Nyeri and surrounding areas. Whether you're looking for a bedsitter, one-bedroom, two-bedroom, or three-bedroom home, or seeking short-term stays like Airbnbs and hotels, JB Properties Limited connects you to verified and convenient options that suit your needs and budget. With a strong commitment to reliability and personalized service, JB Properties Limited ensures your transition to Nyeri is smooth and stress-free.</p>
+    </section>
+
+    <section id="contact">
+     <section id="contact">
+  <h2>Contact Us</h2>
+  <p>Call us: <a href="tel:+254742447454">0742447454</a> | <a href="tel:+254741209422">0741209422</a></p>
+  <a href="https://wa.me/254742447454" target="_blank" class="whatsapp-btn">Message on WhatsApp</a>
+  <a href="https://wa.me/254741209422" target="_blank" class="whatsapp-btn">Chat on WhatsApp</a>
+
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqKh09743YMUVceJMxnzUZN42vBm-0CMXm_-q4FxyfVEaN8w/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</section>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="jbpropertieslimited@gmail.com" title="Email" target="_blank">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="tel:+254742447454" title="Call" target="_blank">
+        <i class="fas fa-phone"></i> Call
+      </a>
+      <a href="https://wa.me/254742447454" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.facebook.com/share/16U4vGBYvJ" target="_blank" title="Facebook">
+    <i class="fab fa-facebook"></i> Facebook
+</a>
+      <a href="https://instagram.com/jbpropertieslimited" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.tiktok.com/@jbpropertieslimited?_t=ZM-8wBVIBXB9V8&_r=1" target="_blank" title="TikTok">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+    </div>
+    <p>&copy; 2025 JB Properties Limited. All rights reserved.</p>
+  </footer>
+</body>
+</html>
